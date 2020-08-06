@@ -1,30 +1,29 @@
 openapi: '3.0.2'
 info:
-  title: Books Service 
+  title: Book Service 
   description: This service allows for control of the system's books
   version: '1.0'
   contact:
-    name: Jose Francisco Mateo Carrasco
-    email: locutermo@gmail.com
+    name: Katty Susana Gutierrez Villanueva
+    email: katugutierrez17@gmail.com
 servers:
-  - url: https://books-service-sisgebi.herokuapp.com/  
+  - url: https://linkDeployInHeroku/  
 
 tags:
   - name: Book
     description: Everything about book
         
 paths:
-  #Modulo de libros  
+  #Modulo de Libros
   /books:
     get:
       tags:
         - Book      
-      summary: Find all books
-            
+      summary: Find all books          
       operationId: index
       responses:      
         '200':
-          $ref: components/responses/responses.yml#/ShowBooks          
+          $ref: components/responses/responses.yml#/ShowBooks         
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -35,20 +34,20 @@ paths:
           
     post:
       tags:
-        - Book    
+        - Book
       summary: Add a new book to the system
       operationId: store
       requestBody:
-        description: book to add to the system
+        description: Book to add to the system
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/BookPayload
+              $ref: components/schemas/payloads/payload.yml#/BookInformationPayload
       responses:      
         '201':
-          $ref: components/responses/responses.yml#/Created          
+          $ref: components/responses/responses.yml#/CreatedBook       
         '404':          
-          $ref: components/responses/responses.yml#/NotFound 
+          $ref: components/responses/responses.yml#/NotFound
         '405':
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
@@ -64,7 +63,7 @@ paths:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/ShowBook       
+          $ref: components/responses/responses.yml#/ShowBook      
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -74,19 +73,19 @@ paths:
     put: 
       tags:
         - Book
-      summary: Update Book
+      summary: Update an existing book
       operationId: update
       parameters: 
         - $ref: components/parameters/parameters.yml#/id
       requestBody:
-        description: book to update to the system
+        description: Book to update to the system
         content:
           x-www-form-urlencoded:
             schema:
               $ref: components/schemas/payloads/payload.yml#/BookPayload
       responses:
         '201':
-          $ref: components/responses/responses.yml#/Created      
+          $ref: components/responses/responses.yml#/UpdateBook
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -99,13 +98,13 @@ paths:
     delete:
       tags:
         - Book
-      summary: Delete Book
+      summary: Delete an existing book
       operationId: destroy
       parameters:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/DeleteBook       
+          $ref: components/responses/responses.yml#/DeleteBook    
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -113,7 +112,155 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
+  /books/search:
+    get:
+      tags:
+        - Book
+      summary: Search for book by parameter
+      operationId: search
+      parameters:
+        - $ref: components/parameters/parameters.yml#/title
+        - $ref: components/parameters/parameters.yml#/secondaryTitle
+        - $ref: components/parameters/parameters.yml#/isbn
+        - $ref: components/parameters/parameters.yml#/clasification
+        - $ref: components/parameters/parameters.yml#/year
+        - $ref: components/parameters/parameters.yml#/keywords
+        - $ref: components/parameters/parameters.yml#/author_id
+        - $ref: components/parameters/parameters.yml#/editorial_id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowBooks      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
 
+  /books/pagination:
+    get:
+      tags:
+        - Book
+      summary: Recover a certain number of books per page
+      operationId: pagBook
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowBookPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+  /books/{id}/information:
+    get:
+      tags:
+        - Book
+      summary: Get all information and copies about a book
+      operationId: showInformationBook
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowInformationBook   
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+  /books/{id}/copies:     
+    post:
+      tags:
+        - Book
+      summary: Add a new book copy to the system
+      operationId: store
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: book copy to add to the system
+        content:
+          application/json:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/BookCopyPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/CreatedBookCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /books/{id}/copies/{id_copy}:
+    get:
+      tags:
+        - Book
+      summary: Get information about a copy of book
+      operationId: showBookCopy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+        - $ref: components/parameters/parameters.yml#/id_copy
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowBookCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+        tags:
+          - Book
+        summary: Update a book copy
+        operationId: update
+        parameters: 
+          - $ref: components/parameters/parameters.yml#/id
+          - $ref: components/parameters/parameters.yml#/id_copy
+        requestBody:
+          description: Book copy to update to the system
+          content:
+            x-www-form-urlencoded:
+              schema:
+                $ref: components/schemas/payloads/payload.yml#/BookCopyPayload
+        responses:
+          '201':
+            $ref: components/responses/responses.yml#/UpdateBookCopy
+          '404':          
+            $ref: components/responses/responses.yml#/NotFound 
+          '405':
+            $ref: components/responses/responses.yml#/MethodNotAllowed           
+          '401':
+            $ref: components/responses/responses.yml#/Unauthenticated 
+          '422':
+            $ref: components/responses/responses.yml#/UnprocessableEntity
+    
+    delete:
+      tags:
+        - Book
+      summary: Delete a book copy
+      operationId: destroy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+        - $ref: components/parameters/parameters.yml#/id_copy
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteBookCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+      
 # Aplicar la API key globalmente a todas las operaciones 
 security:
   - Authorization: []

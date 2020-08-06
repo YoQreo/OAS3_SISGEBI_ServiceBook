@@ -1,0 +1,141 @@
+{
+    "data":
+    {
+    
+            "total": 50,
+            "per_page": 5,
+            "current_page": 1,
+            "last_page": 10,
+            "first_page_url": "http://laravel.app?page=1",
+            "last_page_url": "http://laravel.app?page=10",
+            "next_page_url": "http://laravel.app?page=2",
+            "prev_page_url": null,
+            "path": "http://laravel.app",
+            "from": 1,
+            "to": 5,
+            "data":
+          
+            [
+                {
+                    "id": 1,
+                    "title": "Doloribus occaecati tenetur et at sint",
+                    "clasification": "QAR.234p.a2",
+                    "authors": [  
+                        {
+                            "author_id": 1,
+                            "type": 1
+                        },
+                        {
+                            "author_id": 2,
+                            "type": 2
+                        }
+                    ],
+                    "editorials": [
+                        {
+                            "editorial_id": 1,
+                            "type": 1
+                        },
+                        {
+                            "editorial_id": 2,
+                            "type": 2
+                        }
+                    ],
+                    "copies": 2
+                },
+                {
+                    "id": 2,
+                    "title": "Eius perferendis necessitatibus necessitatibus",
+                    "clasification": "QAR.234p.b2",
+                    "authors": [  
+                        {
+                            "author_id": 3,
+                            "type": 1
+                        },
+                        {
+                            "author_id": 4,
+                            "type": 2
+                        }
+                    ],
+                    "editorials": [
+                        {
+                            "editorial_id": 2,
+                            "type": 1
+                        },
+                        {
+                            "editorial_id": 3,
+                            "type": 2
+                        }
+                    ],
+                    "copies": 3
+                },
+                {
+                    "id": 3,
+                    "title": "Qui reiciendis aut consequatur nihil",
+                    "clasification": "QAR.234p.c2",
+                    "authors": [
+                        {
+                            "author_id": 2,
+                            "type": 1
+                        },
+                        {
+                            "author_id": 1,
+                            "type": 2
+                        }
+                    ],
+                    "editorials": [
+                        {
+                            "editorial_id": 2,
+                            "type": 1
+                        },
+                        {
+                            "editorial_id": 4,
+                            "type": 2
+                        }
+                    ],
+                    "copies": 1
+                },
+                {
+                    "id": 4,
+                    "title": "Est praesentium voluptatem non dolorem",
+                    "clasification": "QAR.234p.d2",
+                    "authors": [
+                        {
+                            "author_id": 4,
+                            "type": 1
+                        }
+                    ],
+                    "editorials": [  
+                        {
+                            "editorial_id": 3,
+                            "type": 1
+                        }
+                    ],
+                    "copies": 4
+                },
+                {
+                    "id": 5,
+                    "title": "Aut quia ut dicta voluptate",
+                    "clasification": "QAR.234p.e2",
+                    "authors": [  
+                        {
+                            "author_id": 1,
+                            "type": 1
+                        }
+                    ],
+                    "editorials": [
+                        {
+                            "editorial_id": 1,
+                            "type": 1
+                        },
+                        {
+                            "editorial_id": 2,
+                            "type": 2
+                        }
+                    ],
+                    "copies": 5
+                }
+            ]
+    },
+    "code": 200,
+    "type": "S002"
+}

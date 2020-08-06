@@ -2,85 +2,282 @@
     "data": [
         {
             "id": 1,
-            "title": "Voluptas aliquam est.",
-            "description": "Veritatis blanditiis alias rerum et quos neque delectus et.",
-            "price": 137,
-            "author_id": 2,
-            "created_at": "2020-04-16 07:35:07",
-            "updated_at": "2020-04-16 07:35:07"
+            "title": "Doloribus occaecati tenetur et at sint",
+            "secondaryTitle": "Voluptas aliquam est",
+            "isbn": "9783161484100",
+            "clasification": "QAR.234p.a2",
+            "year": 2018,
+            "tome": 1,
+            "edition": 1,
+            "extension": 200,
+            "dimensions": "24x22",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Vel voluptatem at culpa sint.",
+            "chapters": "Laborum non illum saepe.",
+            "summary": "Sint omnis atque quia id ut placeat.",
+            "keywords": "abc, access",
+            "authors": [  
+                {
+                    "author_id": 1,
+                    "type": 1
+                },
+                {
+                    "author_id": 2,
+                    "type": 2
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 1,
+                    "type": 1
+                },
+                {
+                    "editorial_id": 2,
+                    "type": 2
+                }
+            ],
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 2,
-            "title": "Ab optio omnis earum.",
-            "description": "Laudantium nihil labore aut.",
-            "price": 93,
-            "author_id": 27,
+            "title": "Eius perferendis necessitatibus necessitatibus",
+            "secondaryTitle": "Possimus ea numquam quia nihil",
+            "isbn": "9763161484200",
+            "clasification": "QAR.234p.b2",
+            "year": 2016,
+            "tome": 2,
+            "edition": 2,
+            "extension": 300,
+            "dimensions": "22x20",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Sit voluptas debitis quos qui eius non.",
+            "chapters": "Et laudantium voluptatum est rerum.",
+            "summary": "Id doloribus voluptas magnam et aliquid et vel.",
+            "keywords": "abc, data",
+            "authors": [  
+                {
+                    "author_id": 3,
+                    "type": 1
+                },
+                {
+                    "author_id": 4,
+                    "type": 2
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 2,
+                    "type": 1
+                },
+                {
+                    "editorial_id": 3,
+                    "type": 2
+                }
+            ],
             "created_at": "2020-04-16 07:35:08",
             "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 3,
-            "title": "Vel quo sed quod.",
-            "description": "Consequatur blanditiis officia facere natus aut magni ea.",
-            "price": 111,
-            "author_id": 46,
+            "title": "Qui reiciendis aut consequatur nihil",
+            "secondaryTitle": "Impedit molestiae eum quod quidem eum",
+            "isbn": "5463161484200",
+            "clasification": "QAR.234p.c2",
+            "year": 2012,
+            "tome": 1,
+            "edition": 3,
+            "extension": 250,
+            "dimensions": "20x18",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Et labore adipisci autem similique quidem ut.",
+            "chapters": "Non eligendi quia illo nihil.",
+            "summary": "Aliquam id et beatae libero.",
+            "keywords": "abc, information",
+            "authors": [
+                {
+                    "author_id": 2,
+                    "type": 1
+                },
+                {
+                    "author_id": 1,
+                    "type": 2
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 2,
+                    "type": 1
+                },
+                {
+                    "editorial_id": 4,
+                    "type": 2
+                }
+            ],
             "created_at": "2020-04-16 07:35:08",
             "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 4,
-            "title": "Sunt eligendi.",
-            "description": "Quasi itaque consequatur libero ea nulla.",
-            "price": 93,
-            "author_id": 44,
+            "title": "Est praesentium voluptatem non dolorem",
+            "secondaryTitle": "Non corrupti enim laborum modi modi",
+            "isbn": "1234161484200",
+            "clasification": "QAR.234p.d2",
+            "year": 2013,
+            "tome": 2,
+            "edition": 1,
+            "extension": 275,
+            "dimensions": "24x22",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Ipsa incidunt tempore quisquam itaque.",
+            "chapters": "Libero iusto quisquam ratione veniam.",
+            "summary": "Qui ratione nobis cum blanditiis autem.",
+            "keywords": "abc, def",
+            "authors": [
+                {
+                    "author_id": 4,
+                    "type": 1
+                }
+            ],
+            "editorials": [  
+                {
+                    "editorial_id": 3,
+                    "type": 1
+                }
+            ],
             "created_at": "2020-04-16 07:35:08",
             "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 5,
-            "title": "Et assumenda cupiditate.",
-            "description": "Sequi autem aut impedit ut assumenda vel.",
-            "price": 56,
-            "author_id": 23,
+            "title": "Aut quia ut dicta voluptate",
+            "secondaryTitle": "Illum est sit rerum voluptatum",
+            "isbn": "3453161484200",
+            "clasification": "QAR.234p.e2",
+            "year": 2014,
+            "tome": 1,
+            "edition": 4,
+            "extension": 275,
+            "dimensions": "22x20",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Consequatur rem officia voluptatem libero ut.",
+            "chapters": "Doloribus esse est ad quae impedit quam at.",
+            "summary": "Voluptas omnis explicabo id suscipit.",
+            "keywords": "abc, hij",
+            "authors": [  
+                {
+                    "author_id": 1,
+                    "type": 1
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 1,
+                    "type": 1
+                },
+                {
+                    "editorial_id": 2,
+                    "type": 2
+                }
+            ],
             "created_at": "2020-04-16 07:35:08",
             "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 6,
-            "title": "Consequatur molestiae eum et.",
-            "description": "Eveniet velit consequatur eum repellat.",
-            "price": 150,
-            "author_id": 35,
+            "title": "Tempora voluptas a vitae voluptas",
+            "secondaryTitle": "Voluptas ea explicabo ab dolor adipisci",
+            "isbn": "1234561484200",
+            "clasification": "QAR.234p.f2",
+            "year": 2012,
+            "tome": 1,
+            "edition": 5,
+            "extension": 280,
+            "dimensions": "22x20",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Et atque sed sunt quam officiis iure.",
+            "chapters": "Soluta qui quis id odio.",
+            "summary": "Omnis distinctio reprehenderit blanditiis impedit sit et amet.",
+            "keywords": "abc, klm",
+            "authors": [  
+                {
+                    "author_id": 2,
+                    "type": 1
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 5,
+                    "type": 1
+                }
+            ],
             "created_at": "2020-04-16 07:35:08",
             "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 7,
-            "title": "Consequatur asperiores ut.",
-            "description": "Provident aut maxime commodi ea aliquid eligendi ullam qui.",
-            "price": 98,
-            "author_id": 12,
-            "created_at": "2020-04-16 07:35:09",
-            "updated_at": "2020-04-16 07:35:09"
+            "title": "Dolorem quibusdam numquam quo omnis minus",
+            "secondaryTitle": "Atque minima saepe explicabo placeat voluptatem",
+            "isbn": "1234561484300",
+            "clasification": "QAR.234p.g2",
+            "year": 2018,
+            "tome": 1,
+            "edition": 5,
+            "extension": 290,
+            "dimensions": "22x20",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Deleniti rerum non facere minima nihil sapiente.",
+            "chapters": "Doloribus provident enim omnis reiciendis possimus nisi.",
+            "summary": "Sapiente laboriosam et tempore unde sunt fuga quos.",
+            "keywords": "zzz, klm",
+            "authors": [  
+                {
+                    "author_id": 3,
+                    "type": 1
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 1,
+                    "type": 1
+                }
+            ],
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2020-04-16 07:35:08"
         },
         {
             "id": 8,
-            "title": "Aut maxime nisi.",
-            "description": "Occaecati ea et in.",
-            "price": 29,
-            "author_id": 20,
-            "created_at": "2020-04-16 07:35:09",
-            "updated_at": "2020-04-16 07:35:09"
-        },
-        {
-            "id": 9,
-            "title": "Illo modi.",
-            "description": "Et facilis est voluptatem inventore quasi ex architecto facilis.",
-            "price": 80,
-            "author_id": 15,
-            "created_at": "2020-04-16 07:35:09",
-            "updated_at": "2020-04-16 07:35:09"
+            "title": "Nemo qui earum rerum doloremque ut occaecati voluptate",
+            "secondaryTitle": "Sit itaque aspernatur iusto eligendi deserunt",
+            "isbn": "3334561484300",
+            "clasification": "QAR.234p.h2",
+            "year": 2017,
+            "tome": 1,
+            "edition": 5,
+            "extension": 300,
+            "dimensions": "22x20",
+            "accompaniment": "Vel voluptatem",
+            "observations": "Id dolore dignissimos molestias est voluptas.",
+            "chapters": "Quisquam dolores enim eos et qui eos et.",
+            "summary": "Sunt sed eos quo modi est repudiandae eaque et.",
+            "keywords": "yyy, klm",
+            "authors": [  
+                {
+                    "author_id": 2,
+                    "type": 1
+                }
+            ],
+            "editorials": [
+                {
+                    "editorial_id": 2,
+                    "type": 1
+                }
+            ],
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2020-04-16 07:35:08"
         }
+
     ],
-    "code": 200
+    "code": 200,
+    "type": "S002"
 }

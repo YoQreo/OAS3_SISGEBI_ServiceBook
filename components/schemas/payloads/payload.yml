@@ -4,40 +4,228 @@
       type: object
       properties:        
         title:
-          type: string            
-        seconday_title: 
-          type: string                    
+          type: string          
+        secondaryTitle: 
+          type: string
+        isbn:
+          type: string
+        clasification:
+          type: string
+        year:
+          type: integer
+        tome: 
+          type: integer 
         edition: 
-          type: integer          
-        summary: 
-          type: string
-        isbn: 
-          type: string
+          type: integer
         extension: 
-          type: string
-        observations: 
-          type: string 
+          type: integer
         dimensions: 
           type: string
         accompaniment: 
           type: string
+        observations: 
+          type: text
+        chapters:
+          type: text
+        summary: 
+          type: text
         keywords:
-          type: string 
-        publication_date: 
           type: string
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type:
+              type: integer
+        editorials:
+          type: array
+          properties:
+            editorial_id:
+              type: integer
+            type:
+              type: integer             
+      example:
+        title: "Doloribus occaecati tenetur et at sint"
+        secondaryTitle: "Voluptas aliquam est"
+        isbn: "9783161484100"
+        clasification: "QAR.234p.a2"
+        year: 2018
+        tome: 1
+        edition: 1
+        extension: 200
+        dimensions: "24x22"
+        accompaniment: "Vel voluptatem"
+        observations: "Vel voluptatem at culpa sint."
+        chapters: "Laborum non illum saepe."
+        summary: "Sint omnis atque quia id ut placeat."
+        keywords: "abc, access"
+        authors:  
+          - author_id: 1
+            type: 1
+          - author_id: 2
+            type: 2
+        editorials:  
+          - editorial_id: 1
+            type: 1
+          - editorial_id: 2
+            type: 2
+
+    BookInformationPayload:
+      type: object
+      properties:        
+        title:
+          type: string          
+        secondaryTitle: 
+          type: string
+        isbn:
+          type: string
+        clasification:
+          type: string
+        year:
+          type: integer
         tome: 
-          type: integer                       
-      example:           
-          title: Jessie James Meets Frankenstein's Daughter
-          secondary_title: Soloist
-          edition: 1
-          summary: Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
-          isbn: 008384517-8
-          extension: 52584-045
-          observations: Sed ante. Vivamus tortor.
-          dimensions: 16
-          accompaniment: in hac
-          keywords: lobortis,convallis,tortor,risus
-          publication_date: 9/26/2019
-          tome: 1
+          type: integer 
+        edition: 
+          type: integer
+        extension: 
+          type: integer
+        dimensions: 
+          type: string
+        accompaniment: 
+          type: string
+        observations: 
+          type: text
+        chapters:
+          type: text
+        summary: 
+          type: text
+        keywords:
+          type: string
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type:
+              type: integer
+        editorials:
+          type: array
+          properties:
+            editorial_id:
+              type: integer
+            type:
+              type: integer
+        copies:
+          type: array
+          properties:
+            incomeNumber: 
+              type: string
+            volume: 
+              type: integer
+            availability: 
+              type: integer
+            acquisitionModality: 
+              type: integer
+            acquisitionSource: 
+              type: string
+            acquisitionPrice: 
+              type: number
+            acquisitionDate: 
+              type: string
+            publicationLocation: 
+              type: string 
+            printType: 
+              type: integer
+            barcode: 
+              type: string 
+            stand_id: 
+              type: integer
+      example:  
+        title: "Doloribus occaecati tenetur et at sint"
+        secondaryTitle: "Voluptas aliquam est"
+        isbn: "9783161484100"
+        clasification: "QAR.234p.a2"
+        year: 2018
+        tome: 1
+        edition: 1
+        extension: 200
+        dimensions: "24x22"
+        accompaniment: "Vel voluptatem"
+        observations: "Vel voluptatem at culpa sint."
+        chapters: "Laborum non illum saepe."
+        summary: "Sint omnis atque quia id ut placeat."
+        keywords: "abc, access"
+        authors:  
+          - author_id: 1
+            type: 1
+          - author_id: 2
+            type: 2
+        editorials:  
+          - editorial_id: 1
+            type: 1
+          - editorial_id: 2
+            type: 2
+        copies:  
+          - incomeNumber: "298451"
+            volume: 1
+            availability: 1
+            acquisitionModality: 2
+            acquisitionSource: "Laborum non illum saepe"
+            acquisitionPrice: 100
+            acquisitionDate: "2020-06-26"
+            publicationLocation: "Peru"
+            printType: 1
+            barcode: "200001"
+            stand_id: 1
+          - incomeNumber: "298455"
+            volume: 1
+            availability: 1
+            acquisitionModality: 1
+            acquisitionSource: "Laborum non illum saepe"
+            acquisitionPrice: 100
+            acquisitionDate: "2020-06-25"
+            publicationLocation: "Peru"
+            printType: 2
+            barcode: "200002"
+            stand_id: 2
+    
+    BookCopyPayload:
+      type: object
+      properties:
+        incomeNumber: 
+          type: string
+        volume: 
+          type: integer
+        availability: 
+          type: integer
+        acquisitionModality: 
+          type: integer
+        acquisitionSource: 
+          type: string
+        acquisitionPrice: 
+          type: number
+        acquisitionDate: 
+          type: string
+        publicationLocation: 
+          type: string 
+        printType: 
+          type: integer
+        barcode: 
+          type: string
+        stand_id: 
+          type: integer
+      example:
+        incomeNumber: "298451"
+        volume: 1
+        availability: 1
+        acquisitionModality: 2
+        acquisitionSource: "Laborum non illum saepe"
+        acquisitionPrice: 100
+        acquisitionDate: "2020-06-26"
+        publicationLocation: "Peru"
+        printType: 1
+        barcode: "200001"
+        stand_id: 1
+
       

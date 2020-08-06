@@ -1,0 +1,77 @@
+{
+    "data": {
+        "id": 1,
+        "title": "Doloribus occaecati tenetur et at sint",
+        "secondaryTitle": "Voluptas aliquam est",
+        "isbn": "9783161484100",
+        "clasification": "QAR.234p.a2",
+        "year": 2018,
+        "tome": 1,
+        "edition": 1,
+        "extension": 200,
+        "dimensions": "24x22",
+        "accompaniment": "Vel voluptatem",
+        "observations": "Vel voluptatem at culpa sint.",
+        "chapters": "Laborum non illum saepe.",
+        "summary": "Sint omnis atque quia id ut placeat.",
+        "keywords": "abc, access",
+        "authors": [  
+            {
+                "author_id": 1,
+                "type": 1
+            },
+            {
+                "author_id": 2,
+                "type": 2
+            }
+        ],
+        "editorials": [  
+            {
+                "editorial_id": 1,
+                "type": 1
+            },
+            {
+                "editorial_id": 2,
+                "type": 2
+            }
+        ],
+        "copies": [  
+            {
+                "id": 1,
+                "incomeNumber": "298451",
+                "volume": 1,
+                "availability": 1,
+                "acquisitionModality": 2,
+                "acquisitionSource": "Laborum non illum saepe",
+                "acquisitionPrice": 100,
+                "acquisitionDate": "2020-06-26",
+                "publicationLocation": "Peru",
+                "printType": 1,
+                "barcode": "200001",
+                "stand_id": 1,
+                "created_at": "2020-06-26 18:35:08",
+                "updated_at": "2020-06-26 18:35:08"
+            },
+            {
+                "id": 2,
+                "incomeNumber": "298455",
+                "volume": 1,
+                "availability": 1,
+                "acquisitionModality": 1,
+                "acquisitionSource": "Laborum non illum saepe",
+                "acquisitionPrice": 100,
+                "acquisitionDate": "2020-06-25",
+                "publicationLocation": "Peru",
+                "printType": 2,
+                "barcode": "200002",
+                "stand_id": 2,
+                "created_at": "2020-06-26 18:35:08" ,
+                "updated_at": "2020-06-26 18:35:08"
+            }
+        ],
+        "created_at": "2020-06-26 17:47:16",
+        "updated_at": "2020-06-26 17:47:16"
+    },
+    "code": 200,
+    "type": "S001"
+}

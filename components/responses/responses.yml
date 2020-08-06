@@ -35,13 +35,13 @@
             $ref: ../schemas/responses/error.yml#/UnauthenticatedResponse            
 
   
-    ## Respuestas de exito específicas
-    Created:
+    ## Respuestas de exito específicas para Book
+    CreatedBook:
       description: The resource has been successfully created
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedResponse                        
+            $ref: ../schemas/responses/successful.yml#/CreatedBookResponse                        
     
     ShowBooks: 
       description: Show all books
@@ -50,7 +50,7 @@
           schema:
             $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
           example: 
-            $ref: ../../examples/books.json
+            $ref: ../../examples/Books.json
     
     ShowBook:
       description: Show one book 
@@ -59,10 +59,64 @@
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                
 
+    ShowBookPerPage:
+      description: Show certain amount of Books per page
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowBookPerPageResponse  
+          example: 
+            $ref: ../../examples/BookPerPage.json
+            
+    UpdateBook:
+      description: The resource has been successfully updated
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/UpdateBookResponse
+
     DeleteBook:
       description: Delete one book 
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                            
+            $ref: ../schemas/responses/successful.yml#/DeleteBookResponse                                                                            
     
+    ShowInformationBook:
+      description: Show all information and copies about a book
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                    
+          example: 
+            $ref: ../../examples/BookInformation.json   
+
+    CreatedBookCopy:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/CreatedBookCopyResponse
+
+    ShowBookCopy:
+      description: Show one copy of book
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowBookCopyResponse                                                 
+          example: 
+            $ref: ../../examples/BookCopy.json  
+
+    UpdateBookCopy:
+      description: The resource has been successfully updated
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/UpdateBookCopyResponse 
+
+    DeleteBookCopy:
+      description: Delete one copy of book
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/DeleteBookCopyResponse

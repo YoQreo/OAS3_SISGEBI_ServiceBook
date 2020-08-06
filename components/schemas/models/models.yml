@@ -9,48 +9,76 @@
           type: integer          
         title:
           type: string          
-        seconday_title: 
-          type: string          
+        secondaryTitle: 
+          type: string
+        isbn:
+          type: string
+        clasification:
+          type: string
+        year:
+          type: integer
+        tome: 
+          type: integer 
         edition: 
           type: integer
-          example: 1
-        summary: 
-          type: string
-          example: 
-        isbn: 
-          type: string
         extension: 
-          type: string
-        observations: 
-          type: string 
+          type: integer
         dimensions: 
           type: string
         accompaniment: 
           type: string
+        observations: 
+          type: text
+        chapters:
+          type: text
+        summary: 
+          type: text
         keywords:
-          type: string 
-        publication_date: 
           type: string
-        tome: 
-          type: integer 
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type:
+              type: integer
+        editorials:
+          type: array
+          properties:
+            editorial_id:
+              type: integer
+            type:
+              type: integer
         created_at: 
           type: string       
         updated_at:
           type: string
       example:
         id: 1
-        title: Voluptas aliquam est
-        secondary_title: Voluptas aliquam est
-        edition: 1
-        summary: Voluptas aliquam est
-        isbn: 22222
-        extension: 200
-        observations: Voluptas aliquam est
-        dimensions: 24x22
-        accompaniment: CD
-        keywords: abc,access
-        publication_date: 23-04-2020
+        title: "Doloribus occaecati tenetur et at sint"
+        secondaryTitle: "Voluptas aliquam est"
+        isbn: "9783161484100"
+        clasification: "QAR.234p.a2"
+        year: 2018
         tome: 1
+        edition: 1
+        extension: 200
+        dimensions: "24x22"
+        accompaniment: "Vel voluptatem"
+        observations: "Vel voluptatem at culpa sint."
+        chapters: "Laborum non illum saepe."
+        summary: "Sint omnis atque quia id ut placeat."
+        keywords: "abc, access"
+        authors:  
+          - author_id: 1
+            type: 1
+          - author_id: 2
+            type: 2
+        editorials:  
+          - editorial_id: 1
+            type: 1
+          - editorial_id: 2
+            type: 2
         created_at: "2020-04-16 07:35:08"
         updated_at: "2020-04-16 07:35:08"
     # BookCopy: Es el esquema del modelo BookCopy, el cual contiene sus atributos y un ejemplo  
@@ -59,36 +87,342 @@
       properties:
         id:
           type: integer
-          example: 1
+        incomeNumber: 
+          type: string
+        volume: 
+          type: integer
+        availability: 
+          type: integer
+        acquisitionModality: 
+          type: integer
+        acquisitionSource: 
+          type: string
+        acquisitionPrice: 
+          type: number
+        acquisitionDate: 
+          type: string
+        publicationLocation: 
+          type: string 
+        printType: 
+          type: integer
+        barcode: 
+          type: string 
         book_id:
           type: integer
-          example: 1
         stand_id: 
           type: integer
-          example: 1 
-        income_number: 
+        created_at: 
+          type: string       
+        updated_at:
+          type: string  
+      example:
+        id: 1
+        incomeNumber: "298451"
+        volume: 1
+        availability: 1
+        acquisitionModality: 2
+        acquisitionSource: "Laborum non illum saepe"
+        acquisitionPrice: 100
+        acquisitionDate: "2020-06-26"
+        publicationLocation: "Peru"
+        printType: 1
+        barcode: "200001"
+        book_id: 1
+        stand_id: 1
+        created_at: "2020-06-26 07:35:08" 
+        updated_at: "2020-06-26 07:35:08"
+
+    # BookInformation: Es el esquema del modelo BookInformation, el cual contiene sus atributos y un ejemplo    
+    BookInformation:
+      type: object
+      properties:
+        id:
+          type: integer          
+        title:
+          type: string          
+        secondaryTitle: 
+          type: string
+        isbn:
           type: string
         clasification:
           type: string
-          example: QAR.234p.a2
-        barcode: 
-          type: string 
-        copy: 
+        year:
           type: integer
-        volume: 
+        tome: 
           type: integer 
-        acquisition_modality: 
+        edition: 
           type: integer
-        acquisition_price: 
-          type: number
-        acquisition_date: 
+        extension: 
+          type: integer
+        dimensions: 
           type: string
-        acquisition_source: 
+        accompaniment: 
           type: string
-        availability: 
+        observations: 
+          type: text
+        chapters:
+          type: text
+        summary: 
+          type: text
+        keywords:
+          type: string
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type:
+              type: integer
+        editorials:
+          type: array
+          properties:
+            editorial_id:
+              type: integer
+            type:
+              type: integer
+        copies:
+          type: array
+          properties:
+            id:
+              type: integer
+            incomeNumber: 
+              type: string
+            volume: 
+              type: integer
+            availability: 
+              type: integer
+            acquisitionModality: 
+              type: integer
+            acquisitionSource: 
+              type: string
+            acquisitionPrice: 
+              type: number
+            acquisitionDate: 
+              type: string
+            publicationLocation: 
+              type: string 
+            printType: 
+              type: integer
+            barcode: 
+              type: string
+            stand_id: 
+              type: integer
+            created_at: 
+              type: string       
+            updated_at:
+              type: string
+        created_at: 
+          type: string       
+        updated_at:
+          type: string
+      example:
+        id: 1
+        title: "Doloribus occaecati tenetur et at sint"
+        secondaryTitle: "Voluptas aliquam est"
+        isbn: "9783161484100"
+        clasification: "QAR.234p.a2"
+        year: 2018
+        tome: 1
+        edition: 1
+        extension: 200
+        dimensions: "24x22"
+        accompaniment: "Vel voluptatem"
+        observations: "Vel voluptatem at culpa sint."
+        chapters: "Laborum non illum saepe."
+        summary: "Sint omnis atque quia id ut placeat."
+        keywords: "abc, access"
+        authors:  
+          - author_id: 1
+            type: 1
+          - author_id: 2
+            type: 2
+        editorials:  
+          - editorial_id: 1
+            type: 1
+          - editorial_id: 2
+            type: 2
+        copies:  
+          - id: 1
+            incomeNumber: "298451"
+            volume: 1
+            availability: 1
+            acquisitionModality: 2
+            acquisitionSource: "Laborum non illum saepe"
+            acquisitionPrice: 100
+            acquisitionDate: "2020-06-26"
+            publicationLocation: "Peru"
+            printType: 1
+            barcode: "200001"
+            stand_id: 1
+            created_at: "2020-06-26 18:35:08" 
+            updated_at: "2020-06-26 18:35:08"
+          - id: 2
+            incomeNumber: "298455"
+            volume: 1
+            availability: 1
+            acquisitionModality: 1
+            acquisitionSource: "Laborum non illum saepe"
+            acquisitionPrice: 100
+            acquisitionDate: "2020-06-25"
+            publicationLocation: "Peru"
+            printType: 2
+            barcode: "200002"
+            stand_id: 2
+            created_at: "2020-06-26 18:35:08" 
+            updated_at: "2020-06-26 18:35:08"
+        created_at: "2020-06-26 17:47:16"
+        updated_at: "2020-06-26 17:47:16"
+    
+    # BookPerPage: Es el esquema del modelo que retorna una consulta por paginación el cual contiene sus atributos y un ejemplo  
+    BookPerPage:
+      type: object
+      properties:
+        total: 
           type: integer
-        printType: 
+        per_page:
           type: integer
-        publication_location: 
-          type: string    
-   
+        current_page:
+          type: integer 
+        last_page: 
+          type: integer
+        first_page_url: 
+          type: string
+        last_page_url: 
+          type: string
+        next_page_url: 
+          type: string
+        prev_page_url: 
+          type: string
+        path: 
+          type: string
+        from: 
+          type: integer 
+        to: 
+          type: integer 
+        data:
+          type: array
+          properties:
+              id:
+                type: integer
+              title:
+                type: string 
+              clasification:
+                type: string
+              authors:
+                type: array
+                properties:
+                  author_id:
+                    type: integer
+                  type:
+                    type: integer
+              editorials:
+                type: array
+                properties:
+                  editorial_id:
+                    type: integer
+                  type:
+                    type: integer
+              copies:
+                type: integer
+      example:
+        total: 50
+        per_page: 5
+        current_page: 1
+        last_page: 10
+        first_page_url: "http://laravel.app?page=1"
+        last_page_url: "http://laravel.app?page=10"
+        next_page_url: "http://laravel.app?page=2"
+        prev_page_url: null
+        path: "http://laravel.app"
+        from: 1
+        to: 5
+        data:  
+          - id: 1
+            title: "Doloribus occaecati tenetur et at sint"
+            clasification: "QAR.234p.a2"
+            authors:  
+              - author_id: 1
+                type: 1
+              - author_id: 2
+                type: 2
+            editorials:  
+              - editorial_id: 1
+                type: 1
+              - editorial_id: 2
+                type: 2
+            copies: 2
+          - id: 2
+            title: "Eius perferendis necessitatibus necessitatibus"
+            clasification: "QAR.234p.b2"
+            authors:  
+              - author_id: 3
+                type: 1
+              - author_id: 4
+                type: 2
+            editorials:  
+              - editorial_id: 2
+                type: 1
+              - editorial_id: 3
+                type: 2
+            copies: 1
+          - id: 3
+            title: "Qui reiciendis aut consequatur nihil"
+            clasification: "QAR.234p.c2"
+            authors:  
+              - author_id: 2
+                type: 1
+              - author_id: 1
+                type: 2
+            editorials:  
+              - editorial_id: 2
+                type: 1
+              - editorial_id: 4
+                type: 2
+            copies: 4
+          - id: 4
+            title: "Est praesentium voluptatem non dolorem"
+            clasification: "QAR.234p.d2"
+            authors:  
+              - author_id: 4
+                type: 1
+            editorials:  
+              - editorial_id: 3
+                type: 1
+            copies: 2
+          - id: 5
+            title: "Aut quia ut dicta voluptate"
+            clasification: "QAR.234p.e2"
+            authors:  
+              - author_id: 1
+                type: 1
+            editorials:  
+              - editorial_id: 1
+                type: 1
+              - editorial_id: 2
+                type: 2
+            copies: 5
+
+    # BookDelete: Es el esquema del modelo BookDelete, el cual contiene sus atributos y un ejemplo  
+    BookDelete:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string          
+        secondaryTitle: 
+          type: string
+        isbn:
+          type: string
+        clasification:
+          type: string
+        year:
+          type: integer
+      example:
+        id: 1
+        title: "Doloribus occaecati tenetur et at sint"
+        secondaryTitle: "Voluptas aliquam est"
+        isbn: "9783161484100"
+        clasification: "QAR.234p.a2"
+        year: 2018
+      

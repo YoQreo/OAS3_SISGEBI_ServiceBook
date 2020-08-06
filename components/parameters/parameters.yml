@@ -8,4 +8,82 @@
       required: true
       description: Book id 
       schema:
-        type: integer     
+        type: integer
+    id_copy:
+      name: id_copy
+      in: path
+      required: true
+      description: Book Copy id
+      schema:
+        type: integer
+    page:
+      name: page
+      in: query
+      required: false
+      description: The number of page
+      schema:
+        type: integer
+    limit:
+      name: limit
+      in: query
+      required: false
+      description: The numbers of items to return for page
+      schema:
+        type: integer
+    title:
+      name: title
+      in: query
+      required: false
+      description: Book title
+      schema:
+        type: string
+    secondaryTitle:
+      name: secondaryTitle
+      in: query
+      required: false
+      description: Book secondary title
+      schema:
+        type: string
+    isbn:
+      name: isbn
+      in: query
+      required: false
+      description: Book ISBN
+      schema:
+        type: string
+    clasification:
+      name: clasification
+      in: query
+      required: false
+      description: Book clasification
+      schema:
+        type: string
+    year:
+      name: year
+      in: query
+      required: false
+      description: Book year
+      schema:
+        type: integer
+    keywords:
+      name: keywords
+      in: query
+      required: false
+      description: Book keywords
+      schema:
+        type: string
+    author_id:
+      name: author_id
+      in: query
+      required: false
+      description: Book author id
+      schema:
+        type: integer
+    editorial_id:
+      name: editorial_id
+      in: query
+      required: false
+      description: Book editorial id
+      schema:
+        type: integer
+        

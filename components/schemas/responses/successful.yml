@@ -6,46 +6,157 @@
       required:
         - error
         - code
+        - type
       properties:
         data: 
           type: object
         code: 
           type: integer
+        type:
+          type: string
 
     # CreatedResponse: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
-    CreatedResponse:
+    CreatedBookResponse:
       type: object
       required:
         - data
         - code
+        - type
       properties:
         data:           
-          $ref: ../models/models.yml#/Book
+          $ref: ../models/models.yml#/BookInformation
         code: 
           type: integer   
-          example: 201  
+          example: 201
+        type:
+          type: string
+          example: S004  
           
     ShowBookResponse:
       type: object
       required:
         - data
         - code
+        - type
       properties: 
         data:
           $ref: ../models/models.yml#/Book
         code:
           type: integer
           example: 200
+        type:
+          type: string
+          example: S001
 
-    ShowBooksResponse:
+    ShowBookPerPageResponse:
       type: object
       required:
         - data
         - code
+        - type
       properties: 
         data:
-          $ref: ../models/models.yml#ArrayOfBooks
+          $ref: ../models/models.yml#/BookPerPage
         code:
           type: integer
           example: 200
+        type:
+          type: string
+          example: S002
+    
+    UpdateBookResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/Book
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S005
+
+    DeleteBookResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/BookDelete
+        code: 
+          type: integer   
+          example: 200
+        type:
+          type: string
+          example: S003
+
+    CreatedBookCopyResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/BookCopy
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S004
+          
+    ShowBookCopyResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/BookCopy
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S001
+
+    UpdateBookCopyResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/BookCopy
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S005
+
+    DeleteBookCopyResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/BookCopy
+        code: 
+          type: integer   
+          example: 200
+        type:
+          type: string
+          example: S003
 
